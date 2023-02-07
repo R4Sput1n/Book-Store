@@ -1,0 +1,220 @@
+[
+  {
+    "model": "store.authors",
+    "pk": 3,
+    "fields": {
+      "first_name": "John",
+      "last_name": "Smith"
+    }
+  },
+  {
+    "model": "store.authors",
+    "pk": 4,
+    "fields": {
+      "first_name": "Olivia",
+      "last_name": "Evans"
+    }
+  },
+  {
+    "model": "store.authors",
+    "pk": 5,
+    "fields": {
+      "first_name": "Andrzej",
+      "last_name": "Kowalski"
+    }
+  },
+  {
+    "model": "store.authors",
+    "pk": 6,
+    "fields": {
+      "first_name": "Mike",
+      "last_name": "Williams"
+    }
+  },
+  {
+    "model": "store.series",
+    "pk": 3,
+    "fields": {
+      "series_name": "The Amazing Series",
+      "volume_count": 3,
+      "author": 3
+    }
+  },
+  {
+    "model": "store.series",
+    "pk": 4,
+    "fields": {
+      "series_name": "Random Books",
+      "volume_count": 2,
+      "author": 5
+    }
+  },
+  {
+    "model": "store.series",
+    "pk": 5,
+    "fields": {
+      "series_name": "Django Tutorial Series",
+      "volume_count": 1,
+      "author": 6
+    }
+  },
+  {
+    "model": "store.series",
+    "pk": 6,
+    "fields": {
+      "series_name": "Python Tutorial Series",
+      "volume_count": 4,
+      "author": 4
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 10,
+    "fields": {
+      "book_title": "First Amazing Book",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis finibus vestibulum ante, sed tincidunt ex iaculis eu. Morbi ante ante, molestie vitae maximus id, mattis eu purus. Phasellus non dignissim velit. In tincidunt aliquet hendrerit. Vestibulum ac dignissim enim. Fusce tristique neque rhoncus mollis rutrum. Cras aliquet orci a congue feugiat. In efficitur cursus nulla, egestas tempor justo ultricies in. Quisque ullamcorper mi vitae tortor ullamcorper, vel tempor lorem varius.\r\n\r\nAenean metus mi, auctor ac mollis vitae, sodales at felis. Suspendisse potenti. Vestibulum porttitor dui lorem, id bibendum ipsum aliquam et. Curabitur ultricies efficitur mauris et tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut vitae finibus mi, at eleifend nibh. Sed pretium accumsan mauris, non venenatis lacus auctor eu. Curabitur vel efficitur ipsum. Aenean non pellentesque ex. Ut ac ultrices sem, non imperdiet nibh. Proin suscipit ullamcorper arcu, sed tempor enim malesuada id. Cras iaculis risus sit amet nunc pharetra, eget tincidunt velit aliquet.",
+      "author": 3,
+      "series": 3,
+      "volume_number": 1,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Amazing Books",
+      "price": "21.37"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 11,
+    "fields": {
+      "book_title": "Second Amazing Book",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porta fringilla dui, quis porttitor nulla consectetur nec. Nulla tincidunt id sem vitae iaculis. Sed vel justo quis magna aliquet cursus porttitor sed eros. Donec nec consequat sapien. Suspendisse in rutrum erat. In sagittis, mauris ut semper euismod, justo nulla laoreet dui, sed malesuada urna sem ac neque. Aliquam erat volutpat. Curabitur efficitur mi vel consequat sagittis. Integer lacinia, metus id tempus suscipit, diam massa maximus mi, non condimentum lacus turpis at ipsum. Vestibulum eget efficitur erat. Donec non lorem in tellus vulputate rhoncus eget sit amet nibh. Phasellus varius lacus elit, nec luctus enim blandit vel. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eleifend mattis tempus. Quisque semper nulla ac ligula vestibulum, ac cursus augue ultrices. Donec ultricies magna tellus, vitae gravida tellus venenatis nec.\r\n\r\nProin ornare dui dignissim, fringilla urna et, laoreet arcu. Vestibulum vestibulum porttitor neque, eget fermentum ligula egestas eget. Sed porttitor pellentesque velit, in accumsan nunc mollis ac. Pellentesque rutrum elit eget quam porttitor sagittis. Donec nec commodo felis. Cras vitae metus pharetra, ultricies ipsum ac, aliquam tellus. Etiam id vehicula nisl, eu scelerisque nisi. Donec maximus pellentesque fermentum. In.",
+      "author": 3,
+      "series": 3,
+      "volume_number": 2,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Amazing Books",
+      "price": "6.79"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 12,
+    "fields": {
+      "book_title": "Third Amazing Book",
+      "description": "Etiam sit amet lorem vulputate urna sagittis eleifend. Cras pellentesque vehicula rutrum. Fusce gravida dui eu nibh malesuada, eu cursus orci dictum. Vivamus ullamcorper fringilla ipsum at luctus. Nunc a tellus vel dolor porta efficitur. Donec vel dapibus ante. Pellentesque viverra faucibus urna, vel convallis lacus varius eget. Cras vel eros eu lorem condimentum semper. Vestibulum eu dui mattis, semper justo vel, lacinia ante. Nulla tincidunt convallis imperdiet. Nam id elit in dui luctus pellentesque in eu dui. Nam commodo arcu mauris, non mattis sapien consequat id. Ut in tortor mi. Curabitur eget ullamcorper metus. Morbi eu tellus vitae ipsum laoreet mollis sed at est. Nullam velit magna, dignissim et sem ac, laoreet interdum ex.",
+      "author": 3,
+      "series": 3,
+      "volume_number": 3,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Amazing Books",
+      "price": "9.99"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 13,
+    "fields": {
+      "book_title": "Basics of Python",
+      "description": "Variables, types, logic and more. Praesent ipsum velit, ornare ut purus vitae, commodo facilisis arcu. Fusce sed varius risus. Nam a ligula eget mauris posuere lobortis eget bibendum mauris. Ut id ullamcorper lorem, a pretium ligula. Integer elementum elit sit amet enim vestibulum, nec posuere nisl malesuada. Praesent fringilla felis id lectus finibus, eget malesuada arcu fermentum. Aliquam dui nibh, ultrices vel sodales id, facilisis vitae orci. Vestibulum tincidunt convallis leo, non auctor erat ornare ac.",
+      "author": 4,
+      "series": 6,
+      "volume_number": 1,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Programming",
+      "price": "5.55"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 14,
+    "fields": {
+      "book_title": "More about Python",
+      "description": "Functions and data structures. Curabitur maximus odio ut felis scelerisque pharetra. Curabitur congue posuere massa quis placerat. Vestibulum leo arcu, aliquet id urna vel, auctor aliquet tellus. Suspendisse porttitor mauris sem, a auctor augue ultricies ut. Mauris scelerisque dolor ut sapien lacinia sollicitudin. Sed pulvinar arcu sem, vitae dictum tellus venenatis ac. Fusce tempor mauris vitae imperdiet mollis. Suspendisse sollicitudin ex orci, vel tempus turpis eleifend vitae. In scelerisque odio sodales ligula laoreet, dapibus sodales velit varius. Quisque ut dictum ipsum. Donec blandit, felis quis euismod fringilla, metus metus pulvinar nisl, vel sodales tortor mi in velit. Morbi consectetur tellus ac erat porttitor viverra. Ut accumsan, tellus ut fringilla tincidunt, lectus diam faucibus lectus, eu vulputate massa quam id leo. Phasellus elementum libero a orci ultrices, ac gravida lacus consequat.",
+      "author": 4,
+      "series": 6,
+      "volume_number": 2,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Programming",
+      "price": "5.55"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 15,
+    "fields": {
+      "book_title": "Classes in Python",
+      "description": "Something about classes. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet faucibus ligula, a volutpat orci. Cras sed molestie quam. Curabitur tristique nulla ac metus semper, a posuere augue rutrum. Curabitur pulvinar mauris a eros finibus varius. Vestibulum varius, mauris nec hendrerit tristique, metus erat posuere eros, eget dignissim neque lacus in ante. Quisque sed porttitor ipsum. Nulla iaculis risus vitae ex euismod, quis tristique ex facilisis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\r\n\r\nPellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam massa dolor, bibendum dignissim euismod eget, dapibus vel est. Suspendisse in dui ligula. Nunc at convallis enim. Maecenas nec lectus vel quam bibendum mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer maximus id risus rutrum suscipit.",
+      "author": 4,
+      "series": 6,
+      "volume_number": 3,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Programming",
+      "price": "5.55"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 16,
+    "fields": {
+      "book_title": "Python is not that hard",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius nisl ut est pretium, ut bibendum est molestie. Morbi tincidunt, dolor et condimentum sagittis, tellus est lacinia lectus, non imperdiet purus ante ut lectus. Cras condimentum rhoncus tristique. Maecenas convallis elementum ante eget vehicula. Suspendisse nec convallis mauris. Donec vitae tristique metus. Praesent ac auctor eros. Duis at efficitur eros, eget porta mi. Cras at odio sit amet lacus ornare bibendum et nec dolor. Maecenas non turpis mauris. Ut elementum accumsan convallis. Cras non urna at felis commodo semper. Nunc non iaculis odio, ut rhoncus nibh. Maecenas rhoncus ligula sed tellus blandit, id euismod sem accumsan.",
+      "author": 4,
+      "series": 6,
+      "volume_number": 4,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Programming",
+      "price": "5.55"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 17,
+    "fields": {
+      "book_title": "Django Introduction",
+      "description": "Sed vitae mattis dolor. Curabitur tempor massa id condimentum condimentum. Morbi sed tortor ullamcorper magna tempor hendrerit sit amet vel dui. Phasellus felis tellus, facilisis ac dictum nec, tincidunt sed mi. Mauris ut eleifend tortor, nec tristique est. Donec suscipit condimentum lacus, sit amet condimentum diam varius sit amet.",
+      "author": 6,
+      "series": 5,
+      "volume_number": 1,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Programming",
+      "price": "7.95"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 18,
+    "fields": {
+      "book_title": "Random Fantasy Book",
+      "description": "Suspendisse condimentum venenatis dolor eu pretium. Praesent vestibulum et magna eu pretium. Integer vitae purus non est aliquet cursus a nec ex. Sed lorem leo, congue sed enim ac, feugiat blandit sapien. In sit amet blandit augue, nec mollis erat. Vestibulum accumsan gravida neque, dignissim consequat velit pretium ac. Maecenas et risus eu diam pulvinar consequat.\r\n\r\nNullam eros sapien, scelerisque quis fringilla sit amet, auctor ac velit. Quisque eleifend arcu dui, non condimentum mauris sodales id. Nulla viverra nisi sed hendrerit rutrum. Vivamus at mi ligula. Donec consequat nec odio vel auctor. Proin id magna vel leo fringilla sagittis eget sed ipsum. Mauris fermentum pretium porta. Curabitur consectetur turpis ut felis euismod ornare a a elit. Curabitur eget nisl dignissim, tristique felis ut, auctor sem. Donec feugiat ipsum ac ipsum faucibus, nec finibus sem rhoncus. Curabitur iaculis vitae nulla ut malesuada. Morbi elit orci, suscipit sit amet euismod id, fermentum a felis. Suspendisse aliquam posuere quam eu egestas. Proin rhoncus nisl eget lacus varius euismod.",
+      "author": 5,
+      "series": 4,
+      "volume_number": 1,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Fantasy",
+      "price": "4.83"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 19,
+    "fields": {
+      "book_title": "Monolog",
+      "description": "- Jak to jest byc skryba? Dobrze? Moim zdaniem to nie ma tak, ze dobrze albo ze nie dobrze. Gdybym mial powiedziec, co cenie w zyciu najbardziej, powiedzialbym, ze ludzi. Ekhm... Ludzi, ktorzy podali mi pomocna dlon, kiedy sobie nie radzilem, kiedy bylem sam. I co ciekawe, to wlasnie przypadkowe spotkania wplywaja na nasze zycie. Chodzi o to, ze kiedy wyznaje sis pewne wartosci, nawet pozornie uniwersalne, bywa, ze nie znajduje sie zrozumienia, ktore by tak rzec, ktore pomaga sie nam rozwijac. Ja mialem szczecie, by tak rzec, poniewaz je znalazlem. I dziekuje zyciu. Dziekuje mu, zycie to spiew, zycie to taniec, zycie to milosc. Wielu ludzi pyta mnie o to samo, ale jak ty to robisz?, skad czerpiesz ta radosc? A ja odpowiadam, ze to proste, to umilowanie zycia, to wlasnie ono sprawia, ze dzisiaj na przyklad buduje maszyny, a jutro... kto wie, dlaczego by nie, oddam sie pracy spolecznej i bede ot, chocby sadzil... znaczy... marchew.\"",
+      "author": 5,
+      "series": 4,
+      "volume_number": 2,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Poetry",
+      "price": "123.33"
+    }
+  }
+]
