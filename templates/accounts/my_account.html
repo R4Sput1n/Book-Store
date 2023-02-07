@@ -1,0 +1,9 @@
+{% extends 'store/base.html' %}
+{% block content %}
+    {% for book in owned_books %}
+        <div>
+            {{ book.product.book_title }} <a href="{{ book.product.pdf_path.url }}" download=""> Get PDF</a>
+        </div>
+
+    {% endfor %}
+{% endblock content %}

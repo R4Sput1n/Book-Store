@@ -1,0 +1,9 @@
+{% extends 'store/base.html' %}
+{% load templatetags %}
+{% block content %}
+    {% if fail_reason == 'already_in_cart' %}
+        <h1>Looks like this book is already in your cart</h1>
+    {% elif fail_reason == 'already_owned' %}
+        <h1>Hey...you got this book already, you know that, right?</h1>
+    {% endif %}
+{% endblock content %}

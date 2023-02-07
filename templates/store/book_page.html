@@ -1,0 +1,93 @@
+{% extends 'store/base.html' %}
+{% block content %}
+  <body>
+    <div class="container my-3">
+      <div class="row">
+        <div class="col-md-3 my-2">
+          <img src="{{ book.cover.url }}" alt="Book cover" class="rounded-lg img-book">
+        </div>
+        <div class="row">
+          <div class="col">
+            <h1 class="mb-2">{{ book.book_title }}</h1>
+            <p class="text-author mb-4">{{ book.author.first_name }} {{ book.author.last_name }}</p>
+            <p class="br"></p>
+            <p>
+                <b>Genre: </b>{{ book.genre }}
+                <br>
+                <b>Part of series: </b> {{ book.series.series_name }}, <b>Vol: </b> {{ book.volume_number }}
+            </p>
+        </div>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p>{{ book.description }}</p>
+          <div class="row">
+              <div class="col-md-6">
+                <button class="btn btn-success mt-3" data-toggle="modal" data-target="#cartModal{{ book.book_id }}">
+                    Add to cart
+                </button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="cartModal{{ book.book_id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Do you want to add this book to cart</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body container">
+              <div class="row">
+                  <div class="col-sm-2">
+                    <img src="{{ book.cover.url }}"  class="rounded mx-2 img-cart" alt="slow internet lol">
+                  </div>
+
+                  <div class="col">
+                      <div class="row">
+                          <div class="col">
+                              <b>{{ book.book_title }}</b> by
+                              <span class="text-author-home">
+                                  {{ book.author }}
+                              </span>
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-9">
+                              <b>Book price:</b>
+                          </div>
+                          <div class="col-sm-3">
+                              ${{ book.price }}
+                          </div>
+                      </div>
+
+                      <div class="row">
+                          <div class="col-sm-9">
+                              <b>Genre:</b> {{ book.genre }}
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="modal-footer container">
+              <a id="{{ book.book_id }}" href="{% url 'add_order' book.book_id %}#{{ book.book_id }}">
+                  <button type="button" class="btn btn-primary">Yes and continue shopping</button>
+              </a>
+              <a href="{% url 'add_and_redirect' book.book_id %}">
+                <button type="button" class="btn btn-primary">Yes and go to cart</button>
+              </a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+{% endblock %}
+
+
