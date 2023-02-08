@@ -2,7 +2,7 @@
 {% load templatetags %}
 {% block content %}
     {% for book in books %}
-        {% replace_characters book.book_title ' ' '-' as url_title%}
+        {% replace_characters book.book_title ' ' '-' as url_title %}
         <article class="media content-section" id="{{ book.book_id }}">
             <div class="media">
                 <a href="{% url 'book_page' url_title %}">

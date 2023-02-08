@@ -32,6 +32,11 @@ h1, h2, h3, h4, h5, h6 {
   height: 300px;
 }
 
+.img-account {
+  width: auto;
+  height: 150px;
+}
+
 .text-author {
   color: #444444;
   font-size: 20px;
@@ -159,6 +164,13 @@ a.article-title:hover {
   width: 120%;
   padding: 10px 20px;
   border: 3px solid #B8B8AA;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.account-content {
+  width: 120%;
+  padding: 10px 20px;
   border-radius: 3px;
   margin-bottom: 20px;
 }
