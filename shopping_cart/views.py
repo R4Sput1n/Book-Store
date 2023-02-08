@@ -91,5 +91,5 @@ def buy_products(request):
             OwnedProducts(product=book_item, owner=customer).save()
 
     clear_cart(request)
-    return redirect('cart')
+    return redirect('account')
 
