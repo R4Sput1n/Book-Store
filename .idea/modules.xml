@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/BOOK_STORE.iml" filepath="$PROJECT_DIR$/.idea/BOOK_STORE.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../djangoProject2/.idea/djangoProject2.iml" filepath="$PROJECT_DIR$/../djangoProject2/.idea/djangoProject2.iml" />
     </modules>
   </component>
 </project>
