@@ -5,7 +5,9 @@
         <b>Genres:</b>
         {% for book_genre in book_genres %}
             <div>
-                {{ book_genre.genre }}
+                <a href="{% url 'home_genre' book_genre.genre %}">
+                    {{ book_genre.genre }}
+                </a>
             </div>
         {% endfor %}
     </article>
@@ -29,13 +31,13 @@
                   {% else %}
                       <p class="article-content"> {{ book.description }}</p>
                   {% endif %}
-                Genre: {{ book.genre }}
+                <b>Genre: </b><a href="{% url 'home_genre' book.genre %}">{{ book.genre }}</a>
                 <div class="row">
                     <div class="col-md-10"></div>
                     <div class="col-md-2">
-                            <button class="btn btn-success mt-3" data-toggle="modal" data-target="#cartModal{{ book.book_id }}">
-                                Add to cart
-                            </button>
+                        <button class="btn btn-success mt-3" data-toggle="modal" data-target="#cartModal{{ book.book_id }}">
+                            Add to cart
+                        </button>
                     </div>
                 </div>
 
@@ -50,7 +52,7 @@
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Do you want to add this book to cart</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
+                  <span aria-hidden="true"></span>
                 </button>
               </div>
               <div class="modal-body container">
@@ -86,7 +88,7 @@
                       </div>
                   </div>
               </div>
-              <div class="modal-footer container">
+                <div class="modal-footer container">
                   <a id="{{ book.book_id }}" href="{% url 'add_order' book.book_id %}#{{ book.book_id }}">
                       <button type="button" class="btn btn-primary">Yes and continue shopping</button>
                   </a>
@@ -94,7 +96,7 @@
                     <button type="button" class="btn btn-primary">Yes and go to cart</button>
                   </a>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-              </div>
+                </div>
             </div>
           </div>
         </div>

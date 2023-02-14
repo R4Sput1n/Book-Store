@@ -15,12 +15,21 @@ def home(request):
     return render(request, 'store/home.html', context)
 
 
+def genre(request, genre):
+    context = {
+        'books': Books.objects.filter(genre=genre),
+        'book_genres': Books.objects.all().distinct('genre')
+    }
+    return render(request, 'store/home.html', context)
+
+
 def search(request):
     searched = request.GET['search']
 
     context = {
         'books': Books.objects.filter(Q(book_title__icontains=searched) | Q(author__first_name__icontains=searched)
-                                      | Q(author__last_name__icontains=searched))
+                                      | Q(author__last_name__icontains=searched) | Q(genre__icontains=searched)),
+        'book_genres': Books.objects.all().distinct('genre')
     }
     if len(context['books']) != 0:
         return render(request, 'store/home.html', context)
