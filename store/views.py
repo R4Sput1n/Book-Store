@@ -9,7 +9,8 @@ from shopping_cart.models import Cart
 
 def home(request):
     context = {
-        'books': Books.objects.all()
+        'books': Books.objects.all(),
+        'book_genres': Books.objects.all().distinct('genre')
     }
     return render(request, 'store/home.html', context)
 

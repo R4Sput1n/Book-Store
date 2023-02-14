@@ -1,5 +1,16 @@
 {% extends 'store/base.html' %}
 {% load templatetags %}
+{% block list %}
+    <article class="content-section">
+        <b>Genres:</b>
+        {% for book_genre in book_genres %}
+            <div>
+                {{ book_genre.genre }}
+            </div>
+        {% endfor %}
+    </article>
+
+{% endblock %}
 {% block content %}
     {% for book in books %}
         {% replace_characters book.book_title ' ' '-' as url_title %}
@@ -18,6 +29,7 @@
                   {% else %}
                       <p class="article-content"> {{ book.description }}</p>
                   {% endif %}
+                Genre: {{ book.genre }}
                 <div class="row">
                     <div class="col-md-10"></div>
                     <div class="col-md-2">

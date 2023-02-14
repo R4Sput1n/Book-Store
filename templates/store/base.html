@@ -57,22 +57,19 @@
       </nav>
     </header>
 
-
-
-    <main role="main" class="container">
-      <div class="row">
+<div class="row">
+    <main role="main" class="col-md-9 ml-5">
         <div class="col-md-10">
-            {% if messages %}
-                {% for message in messages %}
-                    <div class="alert alert-{{ message.tags }}">
-                        {{ message }}
-                    </div>
-                {% endfor %}
-            {% endif %}
             {% block content %}{% endblock %}
         </div>
-      </div>
     </main>
+    <div class="col-md-2">
+        {% block list %}{% endblock %}
+    </div>
+
+</div>
+
+
 
 
     <!-- Optional JavaScript -->
