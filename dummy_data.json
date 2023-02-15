@@ -3,32 +3,28 @@
     "model": "store.authors",
     "pk": 3,
     "fields": {
-      "first_name": "John",
-      "last_name": "Smith"
+      "full_name": "John Smith"
     }
   },
   {
     "model": "store.authors",
     "pk": 4,
     "fields": {
-      "first_name": "Olivia",
-      "last_name": "Evans"
+      "full_name": "Olivia Evans"
     }
   },
   {
     "model": "store.authors",
     "pk": 5,
     "fields": {
-      "first_name": "Andrzej",
-      "last_name": "Kowalski"
+      "full_name": "Andrzej Kowalski"
     }
   },
   {
     "model": "store.authors",
     "pk": 6,
     "fields": {
-      "first_name": "Mike",
-      "last_name": "Williams"
+      "full_name": "Mike Williams"
     }
   },
   {

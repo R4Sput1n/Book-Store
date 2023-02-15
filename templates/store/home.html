@@ -23,7 +23,7 @@
                 </a>
               <div class="media-body">
                 <div class="article-metadata">
-                  <p1 class="mr-2" ><a class="text-author-home" href="#" ><b>{{ book.author.first_name }} {{ book.author.last_name }}</b></a></p1>
+                  <p1 class="mr-2" ><a class="text-author-home" href="#" ><b>{{ book.author }}</b></a></p1>
                 </div>
                 <h2><a class="article-title" href="{% url 'book_page' url_title %}">{{ book.book_title }}</a></h2>
                   {% if book.description|truncatewords:100|length != book.description|truncatewords:101|length %}

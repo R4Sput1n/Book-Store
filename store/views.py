@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.db.models import Q
 from .models import Books
 from .models import Authors
+from django.db.models import Value
+from django.db.models.functions import Concat
 from shopping_cart.models import Cart
 
 # Create your views here.
@@ -25,10 +27,10 @@ def genre(request, genre):
 
 def search(request):
     searched = request.GET['search']
-
     context = {
-        'books': Books.objects.filter(Q(book_title__icontains=searched) | Q(author__first_name__icontains=searched)
-                                      | Q(author__last_name__icontains=searched) | Q(genre__icontains=searched)),
+        'books': Books.objects.filter(Q(book_title__icontains=searched) |
+                                      Q(genre__icontains=searched) |
+                                      Q(author__full_name__icontains=searched)),
         'book_genres': Books.objects.all().distinct('genre')
     }
     if len(context['books']) != 0:

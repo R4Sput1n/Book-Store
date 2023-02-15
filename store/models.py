@@ -3,15 +3,10 @@ from django.db import models
 
 class Authors(models.Model):
     author_id = models.SmallAutoField(primary_key=True)
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
+    full_name = models.CharField(max_length=100, default='DELETE THIS')
 
     def __str__(self):
-        return f'{self.first_name} {self.last_name}'
-
-    # class Meta:
-    #     managed = False
-    #     db_table = 'authors'
+        return self.full_name
 
 
 class Series(models.Model):
@@ -22,10 +17,6 @@ class Series(models.Model):
 
     def __str__(self):
         return self.series_name
-    #
-    # class Meta:
-    #     managed = False
-    #     db_table = 'series'
 
 
 class Books(models.Model):
