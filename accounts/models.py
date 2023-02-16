@@ -7,7 +7,7 @@ from store.models import Authors
 class UserAuthor(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     is_author = models.BooleanField(default=False)
-    author_ref = models.ForeignKey(Authors, on_delete=models.DO_NOTHING, blank=True, null=True)
+    author_ref = models.ForeignKey(Authors, on_delete=models.SET_NULL, blank=True, null=True, unique=True)
 
 
 class OwnedProducts(models.Model):
