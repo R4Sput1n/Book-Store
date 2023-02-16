@@ -23,6 +23,7 @@
             </div>
         </div>
     {% endfor %}
+    {% if not user.userauthor.is_author %}
     <div>
         <h1>Are you and author?</h1>
     </div>
@@ -32,4 +33,5 @@
            <button class="btn btn-primary mx-5">Become an author</button>
         </form>
     </div>
+    {% endif %}
 {% endblock content %}
