@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import OwnedProducts
+from .models import OwnedProducts, UserAuthor
 
-# Register your models here.
+
 admin.site.register(OwnedProducts)
+admin.site.register(UserAuthor)
