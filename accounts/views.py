@@ -27,3 +27,8 @@ def account(request):
         'owned_books': books,
     }
     return render(request, 'accounts/my_account.html', context)
+
+
+def become_author(request):
+    pass
+    #some code to send email to admin

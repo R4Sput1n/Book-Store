@@ -2,7 +2,7 @@
 {% block content %}
     {% for book in owned_books %}
         <div class="row account-content">
-            <div class="col-md-1">
+            <div class="col-md-1 mr-2">
                 <img class="img-account rounded" src="{{ book.product.cover.url }}" alt="error while loading img for {{ book.product.book_title }}">
             </div>
             <div class="col mx-3">
@@ -23,4 +23,13 @@
             </div>
         </div>
     {% endfor %}
+    <div>
+        <h1>Are you and author?</h1>
+    </div>
+    <div>
+        <form action="#" method="get">
+            {% csrf_token %}
+           <button class="btn btn-primary mx-5">Become an author</button>
+        </form>
+    </div>
 {% endblock content %}
