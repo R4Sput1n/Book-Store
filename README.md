@@ -32,6 +32,13 @@ Create `media` directory inside your project's directory
 Inside this directory put default picture for books covers and name it `default.jpg` and default pdf file for all the books and name is `default.pdf`
 
 You can use ones from this repository
+### Migrations
+Before adding anything to database make migrations first
+Run command in terminal:
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
 ### Fill the databse with dummy data
 Run command in terminal
 ```bash

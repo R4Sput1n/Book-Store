@@ -33,31 +33,3 @@ class Books(models.Model):
 
     def __str__(self):
         return self.book_title
-
-    # class Meta:
-    #     managed = False
-    #     db_table = 'books'
-
-
-# class Edition(models.Model):
-#     product_id = models.SmallAutoField(primary_key=True)
-#     book = models.ForeignKey(Books, models.DO_NOTHING, blank=True, null=True)
-#     publisher = models.ForeignKey('Publisher', models.DO_NOTHING, blank=True, null=True)
-#     lang = models.CharField(max_length=50)
-#     price = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True)
-#
-#     # class Meta:
-#     #     managed = False
-#     #     db_table = 'edition'
-#
-#
-# class Publisher(models.Model):
-#     publisher_id = models.SmallAutoField(primary_key=True)
-#     publishing_house = models.CharField(max_length=50)
-#     country = models.CharField(max_length=25, blank=True, null=True)
-#
-#     # class Meta:
-#     #     managed = False
-#     #     db_table = 'publisher'
-#
-
