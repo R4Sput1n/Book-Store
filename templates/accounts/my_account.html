@@ -1,5 +1,19 @@
 {% extends 'store/base.html' %}
 {% block content %}
+    {% if not user.profile.is_author %}
+        <div>
+            <h1>Are you and author?</h1>
+        </div>
+        <div>
+            <form action="#" method="get">
+                {% csrf_token %}
+               <button class="btn btn-primary mx-5">Become an author</button>
+            </form>
+        </div>
+    {% else %}
+        <h2>You are author of these books:</h2>
+    {% endif %}
+    <h1>Bought books</h1>
     {% for book in owned_books %}
         <div class="row account-content">
             <div class="col-md-1 mr-2">
@@ -23,15 +37,4 @@
             </div>
         </div>
     {% endfor %}
-    {% if not user.userauthor.is_author %}
-    <div>
-        <h1>Are you and author?</h1>
-    </div>
-    <div>
-        <form action="#" method="get">
-            {% csrf_token %}
-           <button class="btn btn-primary mx-5">Become an author</button>
-        </form>
-    </div>
-    {% endif %}
 {% endblock content %}
