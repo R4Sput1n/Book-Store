@@ -1,19 +1,30 @@
 {% extends 'store/base.html' %}
 {% block content %}
+    <div class="row">
+        <img src="{{ user.profile.profile_picture.url }}" class="img-profile_pic_main" alt="err">
+        <h1>{{ user.username }}</h1>
+    </div>
     {% if not user.profile.is_author %}
-        <div>
-            <h1>Are you and author?</h1>
-        </div>
-        <div>
+        <div class="row ml-1">
+            <span class="align-middle">You are not an author</span>
             <form action="#" method="get">
                 {% csrf_token %}
                <button class="btn btn-primary mx-5">Become an author</button>
             </form>
         </div>
+        <div>
+
+        </div>
     {% else %}
-        <h2>You are author of these books:</h2>
+        <div class="row">
+            <h2>You are author of these books:</h2>
+        </div>
+        {% for book in books_by %}
+        <div>{{ book }}</div>
+        {% endfor %}
+
     {% endif %}
-    <h1>Bought books</h1>
+    <h2>Bought books</h2>
     {% for book in owned_books %}
         <div class="row account-content">
             <div class="col-md-1 mr-2">

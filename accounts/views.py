@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from .forms import AccountCreationForm
 from accounts.models import OwnedProducts
+from store.models import Books
 
 
 def register(request):
@@ -22,9 +23,11 @@ def register(request):
 @login_required
 def account(request):
     current_user = request.user
-    books = OwnedProducts.objects.filter(owner_id=current_user.id)
+    books_by_user = Books.objects.filter(author=current_user.profile.author_ref)
+    owned_books = OwnedProducts.objects.filter(owner_id=current_user.id)
     context = {
-        'owned_books': books,
+        'owned_books': owned_books,
+        'books_by': books_by_user,
     }
     return render(request, 'accounts/my_account.html', context)
 
