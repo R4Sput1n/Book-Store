@@ -26,12 +26,6 @@ DB_PORT = '5432'
 ```
 You can easily generate secret key using  an online generator like [this one](https://djecrety.ir/)
 
-### Add default picture for books covers and default pdf
-Create `media` directory inside your project's directory
-
-Inside this directory put default picture for books covers and name it `default.jpg` and default pdf file for all the books and name is `default.pdf`
-
-You can use ones from this repository
 ### Migrations
 Before adding anything to database make migrations first
 Run command in terminal:
