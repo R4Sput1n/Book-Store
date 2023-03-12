@@ -8,6 +8,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     is_author = models.BooleanField(default=False)
     author_ref = models.ForeignKey(Authors, on_delete=models.SET_NULL, blank=True, null=True, unique=True)
+    profile_picture = models.ImageField(default='default_profile.jpg', upload_to='profile_pics')
 
 
 class OwnedProducts(models.Model):
