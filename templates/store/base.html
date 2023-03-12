@@ -38,6 +38,9 @@
           </form>
             <div class="navbar-nav">
                 {% if user.is_authenticated %}
+                    <a href="{% url 'account' %}">
+                        <img src="{{ user.profile.profile_picture.url }}"  class="rounded-circle img-profile_pic_navbar mt-2" alt="err">
+                    </a>
                     <a class="nav-item nav-link" href="{% url 'account' %}">My account</a>
                     <a class="nav-item nav-link" href="{% url 'logout' %}">Log out</a>
                     <a href="{% url 'cart' %}">

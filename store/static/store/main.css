@@ -17,6 +17,11 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
 }
 
+.img-profile_pic_navbar {
+  width: 20px;
+  height: 20px;
+}
+
 .img-cart-modal {
   width: auto;
   height: 100px;
