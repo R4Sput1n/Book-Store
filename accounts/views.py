@@ -4,6 +4,7 @@ from django.contrib import messages
 from .forms import AccountCreationForm
 from accounts.models import OwnedProducts
 from store.models import Books
+from django.contrib.auth.models import User
 
 
 def register(request):
@@ -30,6 +31,16 @@ def account(request):
         'books_by': books_by_user,
     }
     return render(request, 'accounts/my_account.html', context)
+
+
+def profile(request, profile):
+    profile = User.objects.get(username=profile)
+    profile_owned_books = OwnedProducts.objects.filter(owner_id=profile)
+    context = {
+        'owned_books': profile_owned_books,
+        'profile': profile,
+    }
+    return render(request, 'accounts/profile.html', context)
 
 
 def become_author(request):
