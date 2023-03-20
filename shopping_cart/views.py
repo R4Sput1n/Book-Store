@@ -52,14 +52,14 @@ def cart(request):
         'total': total
     }
     print(products)
-    return render(request, 'cart/cart.html', context)
+    return render(request, 'store/cart/cart.html', context)
 
 
 @login_required
 def add_to_cart_fail(request, fail_reason):
     context = {'fail_reason': fail_reason}
 
-    return render(request, 'cart/fail.html', context)
+    return render(request, 'store/cart/fail.html', context)
 
 
 @login_required

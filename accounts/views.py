@@ -18,7 +18,7 @@ def register(request):
     else:
         form = AccountCreationForm()
 
-    return render(request, 'accounts/register.html', {'form': form})
+    return render(request, 'store/accounts/register.html', {'form': form})
 
 
 @login_required
@@ -30,7 +30,7 @@ def account(request):
         'owned_books': owned_books,
         'books_by': books_by_user,
     }
-    return render(request, 'accounts/my_account.html', context)
+    return render(request, 'store/accounts/my_account.html', context)
 
 
 def profile(request, profile):
@@ -40,7 +40,7 @@ def profile(request, profile):
         'owned_books': profile_owned_books,
         'profile': profile,
     }
-    return render(request, 'accounts/profile.html', context)
+    return render(request, 'store/accounts/profile.html', context)
 
 
 def become_author(request):
