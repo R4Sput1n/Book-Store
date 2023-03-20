@@ -1,18 +1,13 @@
 from django.shortcuts import render
 from django.db.models import Q
 from .models import Books
-from .models import Authors
-from django.db.models import Value
-from django.db.models.functions import Concat
-from shopping_cart.models import Cart
-
-# Create your views here.
 
 
 def home(request):
     context = {
         'books': Books.objects.all(),
-        'book_genres': Books.objects.all().distinct('genre')
+        'book_genres': Books.objects.all().order_by('genre').distinct('genre')  # Books are sorted on default
+        # by book_title (.models line 35). Distinct needs ordering by itself
     }
     return render(request, 'store/home.html', context)
 
@@ -20,7 +15,7 @@ def home(request):
 def genre(request, genre):
     context = {
         'books': Books.objects.filter(genre=genre),
-        'book_genres': Books.objects.all().distinct('genre')
+        'book_genres': Books.objects.all().order_by('genre').distinct('genre')  # comment - line 9
     }
     return render(request, 'store/home.html', context)
 
@@ -31,7 +26,7 @@ def search(request):
         'books': Books.objects.filter(Q(book_title__icontains=searched) |
                                       Q(genre__icontains=searched) |
                                       Q(author__full_name__icontains=searched)),
-        'book_genres': Books.objects.all().distinct('genre')
+        'book_genres': Books.objects.all().order_by('genre').distinct('genre')  # comment - line 9
     }
     if len(context['books']) != 0:
         return render(request, 'store/home.html', context)

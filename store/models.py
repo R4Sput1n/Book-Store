@@ -31,5 +31,9 @@ class Books(models.Model):
     genre = models.CharField(max_length=25, blank=True, null=True)
     price = models.DecimalField(max_digits=6, decimal_places=2, blank=True, null=True, default=9.99)
 
+    class Meta:
+        ordering = ['book_title']
+
     def __str__(self):
         return self.book_title
+
