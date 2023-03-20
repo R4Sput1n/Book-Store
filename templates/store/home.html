@@ -1,12 +1,12 @@
 {% extends 'store/base.html' %}
 {% load templatetags %}
 {% block list %}
-    <article class="content-section">
+    <article class="content-genres position-fixed mx-auto">
         <b>Genres:</b>
         {% for book_genre in book_genres %}
             <div>
                 <a href="{% url 'home_genre' book_genre.genre %}">
-                    {{ book_genre.genre }}
+                    - {{ book_genre.genre }}
                 </a>
             </div>
         {% endfor %}
