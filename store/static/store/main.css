@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .br {
-  margin-bottom: 175px;
+  margin-bottom: 100px;
 }
 
 ul {
@@ -65,7 +65,7 @@ ul {
 }
 
 .high-div {
- height: 65%;
+  height: 65%;
   background: white;
 }
 
@@ -99,6 +99,29 @@ ul {
   border: 3px solid #B8B8AA;
   border-radius: 3px;
   margin-bottom: 20px;
+}
+
+.content-reviews {
+  background: #ffffff;
+  width: 1000px;
+  height: 250px;
+  padding: 10px 20px;
+  border: 3px solid #B8B8AA;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.content-reviews::-webkit-scrollbar{
+  display: none;
+}
+
+.scroll-div {
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .article-title {
@@ -204,6 +227,6 @@ a.article-title:hover {
 }
 
 .colored {
-    background-color: #981a1a;
-    border-radius: 15px;
+  background-color: #981a1a;
+  border-radius: 15px;
 }

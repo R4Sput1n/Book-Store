@@ -1,93 +1,116 @@
 {% extends 'store/base.html' %}
 {% block content %}
-  <body>
-    <div class="container my-3">
-      <div class="row">
-        <div class="col-md-3 my-2">
-          <img src="{{ book.cover.url }}" alt="Book cover" class="rounded-lg img-book">
-        </div>
-        <div class="row">
-          <div class="col">
-            <h1 class="mb-2">{{ book.book_title }}</h1>
-            <p class="text-author mb-4">{{ book.author }}</p>
-            <p class="br"></p>
-            <p>
-                <b>Genre: </b>{{ book.genre }}
-                <br>
-                <b>Part of series: </b> {{ book.series.series_name }}, <b>Vol: </b> {{ book.volume_number }}
-            </p>
-        </div>
-      </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <p>{{ book.description }}</p>
-          <div class="row">
-              <div class="col-md-6">
-                <button class="btn btn-success mt-3" data-toggle="modal" data-target="#cartModal{{ book.book_id }}">
-                    Add to cart
-                </button>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div>
+	<div class="container my-3">
+		<div class="row">
+			<div class="col-md-3 my-2">
+				<img src="{{ book.cover.url }}" alt="Book cover" class="rounded-lg img-book">
+			</div>
+			<div class="col">
+				<div class="row">
+					<div class="col">
+						<h1 class="mb-2">{{ book.book_title }}</h1>
+						<p class="text-author mb-4">{{ book.author }}</p>
+						<p class="br"></p>
+						<p class="">
+							<b>Genre: </b>{{ book.genre }}
+							<br>
+							<b>Part of series: </b> {{ book.series.series_name }}, <b>Vol: </b> {{ book.volume_number }}
+						</p>
+						<button class="btn btn-success mt-3" data-toggle="modal" data-target="#cartModal{{ book.book_id }}">
+							Add to cart
+						</button>
+					</div>
+				</div>
+			</div>
 
-    <div class="modal fade" id="cartModal{{ book.book_id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Do you want to add this book to cart</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body container">
-              <div class="row">
-                  <div class="col-sm-2">
-                    <img src="{{ book.cover.url }}"  class="rounded mx-2 img-cart" alt="slow internet lol">
-                  </div>
+		</div>
+		<div class="row">
+			<div class="col">
+				<p>{{ book.description }}</p>
+				<div class="row">
+					<div class="col-md-6">
 
-                  <div class="col">
-                      <div class="row">
-                          <div class="col">
-                              <b>{{ book.book_title }}</b> by
-                              <span class="text-author-home">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="scroll-div content-reviews mt-1">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt mauris efficitur est scelerisque, eu vehicula enim auctor. Etiam cursus ipsum vel dictum convallis. Praesent laoreet, justo eu mattis commodo, magna enim sagittis odio, sit amet gravida risus dui et justo. Proin consequat nisi risus, ut fringilla dui gravida ut. Etiam mollis ante vitae eros porttitor vulputate. Pellentesque congue, augue nec interdum lobortis, felis nulla pretium metus, at tristique lorem erat vitae ex. Donec accumsan lobortis erat, ut fermentum nunc consectetur sed.
+
+			Cras ipsum diam, aliquam porta mi at, iaculis tristique nibh. Aenean nec est feugiat, tempor mi sed, posuere nisl. Nam et velit et quam fermentum convallis. Donec quis elit risus. Nulla metus turpis, aliquam vitae mollis in, porta in est. In mollis, neque eu placerat convallis, quam dolor suscipit libero, id porttitor felis est at magna. Pellentesque ac lorem quis ex luctus rutrum vitae venenatis est. Quisque in scelerisque mi. Donec ex enim, convallis quis elementum id, tempus vitae nunc. Sed id risus sed nisi porttitor ultricies. Sed feugiat vel elit non finibus.
+
+			Donec ut tellus in purus sodales commodo a sed ex. Integer sit amet egestas elit. Mauris tristique ante purus, a placerat ligula molestie id. Sed non sem lacinia, hendrerit urna vel, porttitor magna. Aenean vitae purus auctor ligula consectetur tincidunt. Suspendisse potenti. Praesent venenatis quam a augue sagittis, quis auctor enim imperdiet. Morbi condimentum tellus id arcu efficitur, id aliquam nisl fringilla. Vivamus laoreet iaculis nibh vitae dictum. Donec placerat pulvinar purus, et commodo ligula cursus at. Curabitur quis vestibulum tellus. Vestibulum in faucibus augue. Integer sagittis id nibh in laoreet. Donec ut dui tortor.
+
+			Nam in tristique libero. Morbi id varius ex. Quisque consectetur erat lacus, et cursus nibh aliquam eu. Cras vel lobortis mauris. Aliquam ornare eu nulla non laoreet. Mauris sollicitudin, odio nec laoreet ullamcorper, libero mauris commodo metus, ut sagittis tellus risus at magna. Nulla facilisi. Ut diam lorem, porta ac lobortis eget, eleifend hendrerit turpis. Sed vulputate justo eget nibh tincidunt gravida. Proin bibendum tincidunt justo sit amet auctor. Proin sed metus nunc.
+
+			Ut dictum bibendum nibh. In pulvinar mauris quis elit scelerisque, ut aliquet ligula iaculis. Ut hendrerit et magna quis suscipit. Vivamus non feugiat quam. Proin ac velit enim. Quisque placerat dui ligula, et tincidunt massa mattis eget. Cras volutpat sem felis, sit amet dapibus purus interdum at. Sed id ligula volutpat, sagittis erat at, scelerisque dui. Vivamus varius semper convallis. Curabitur elementum eget metus ac tempor. Suspendisse vitae justo vitae lectus consectetur lobortis non ut tellus. Nullam ac augue tempus, pellentesque justo eu, tristique massa.
+
+			Phasellus blandit odio nulla. Aenean eget risus non augue lacinia efficitur finibus placerat ipsum. Praesent eu imperdiet erat. Quisque in porttitor ligula, quis efficitur felis. Sed sed fermentum nisl. Sed semper elementum mauris sit amet sagittis. Mauris nec eros quis libero posuere ullamcorper ut non lorem. Quisque sollicitudin lobortis eleifend. Integer dignissim sapien sed ligula maximus ullamcorper. Quisque pellentesque orci nunc, non rhoncus nisi ultrices et. Quisque dapibus sem augue, ac ornare diam pulvinar a. Phasellus tristique eros eu ligula imperdiet vestibulum. Vivamus tincidunt ac elit non finibus. Nullam tellus elit, condimentum id ante vitae, sollicitudin pretium risus. Vestibulum non sem eros.
+
+			Pellentesque iaculis, diam eget auctor placerat, nunc lacus vulputate libero, eget commodo ligula enim in lectus. Mauris a neque non ipsum imperdiet varius. Aliquam bibendum fermentum metus cursus ornare. Mauris ut consectetur diam, a fringilla lacus. Aliquam cursus vitae ante a ultricies. Duis in lacinia dui. Etiam sollicitudin, lorem ut venenatis accumsan, tellus dolor posuere dui, at consequat risus nisl ac metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam consectetur eros felis, in iaculis dolor egestas eget. Nullam eu vulputate mauris. Aliquam nec elementum dui. Nunc imperdiet dictum nisl, et tempor urna feugiat in. Cras sollicitudin imperdiet dui, eu rutrum arcu ornare non. Mauris maximus dolor aliquam massa faucibus, a bibendum nunc lobortis. Duis sed elit suscipit, bibendum lectus eu, sollicitudin nisi.
+
+			Vivamus sed libero mi. Morbi feugiat urna sit amet ante mollis, a bibendum lacus accumsan. Etiam lectus tortor, congue a est in, faucibus dignissim augue. Suspendisse rhoncus semper risus, sed condimentum sapien pulvinar nec. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Etiam et magna sed est pulvinar congue. Etiam hendrerit lacus ac sem sodales malesuada. Fusce mauris dolor, molestie nec metus a, lobortis pulvinar nisi. Aliquam tincidunt, felis vitae dictum hendrerit, purus urna posuere purus, non dapibus est justo quis felis. Donec urna est, sagittis id molestie in, suscipit ac massa. Sed congue fermentum ullamcorper. Suspendisse interdum augue mi. Vivamus id turpis nec metus luctus tincidunt eget dapibus erat. Quisque tempor mauris vitae lectus luctus malesuada pretium at lorem. Aliquam at neque et lectus ultricies porta ac eu nulla. Suspendisse maximus feugiat efficitur.
+
+			Suspendisse nisi tellus, maximus convallis magna in, luctus tincidunt ante. Maecenas congue lacus massa, tincidunt finibus neque tempor congue. Fusce pellentesque tellus accumsan enim eleifend, finibus rutrum tortor efficitur. Etiam dui tellus, convallis sed suscipit a, faucibus sed sem. Nulla facilisi. Nunc ac porttitor eros. Pellentesque id mi dui. Fusce ac nisi tempus, finibus neque quis, semper felis. Aenean ligula nulla, gravida sed tincidunt quis, efficitur bibendum odio. Nam a lorem sollicitudin, rutrum sapien vitae, laoreet dolor. Proin hendrerit iaculis tellus, quis semper risus pulvinar a.
+
+			Phasellus pharetra non nisl eget porttitor. Vivamus et turpis dignissim, venenatis eros et, tincidunt tellus. Nunc nec maximus nunc. Nulla maximus nibh quis euismod dignissim. Sed non eleifend quam. Phasellus viverra quam id cursus dapibus. Sed vel arcu aliquet, convallis sapien vitae, blandit erat. Duis ultrices, metus a mollis hendrerit, lorem neque tempor nisl, eu sodales ex erat quis odio. Maecenas libero urna, finibus id libero pharetra, efficitur tristique erat.
+		</div>
+	</div>
+
+	<div class="modal fade" id="cartModal{{ book.book_id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Do you want to add this book to cart</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body container">
+					<div class="row">
+						<div class="col-sm-2">
+							<img src="{{ book.cover.url }}"  class="rounded mx-2 img-cart" alt="slow internet lol">
+						</div>
+
+						<div class="col">
+							<div class="row">
+								<div class="col">
+									<b>{{ book.book_title }}</b> by
+									<span class="text-author-home">
                                   {{ book.author }}
                               </span>
-                          </div>
-                      </div>
+								</div>
+							</div>
 
-                      <div class="row">
-                          <div class="col-sm-9">
-                              <b>Book price:</b>
-                          </div>
-                          <div class="col-sm-3">
-                              ${{ book.price }}
-                          </div>
-                      </div>
+							<div class="row">
+								<div class="col-sm-9">
+									<b>Book price:</b>
+								</div>
+								<div class="col-sm-3">
+									${{ book.price }}
+								</div>
+							</div>
 
-                      <div class="row">
-                          <div class="col-sm-9">
-                              <b>Genre:</b> {{ book.genre }}
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="modal-footer container">
-              <a id="{{ book.book_id }}" href="{% url 'add_order' book.book_id %}#{{ book.book_id }}">
-                  <button type="button" class="btn btn-primary">Yes and continue shopping</button>
-              </a>
-              <a href="{% url 'add_and_redirect' book.book_id %}">
-                <button type="button" class="btn btn-primary">Yes and go to cart</button>
-              </a>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+							<div class="row">
+								<div class="col-sm-9">
+									<b>Genre:</b> {{ book.genre }}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer container">
+					<a id="{{ book.book_id }}" href="{% url 'add_order' book.book_id %}#{{ book.book_id }}">
+						<button type="button" class="btn btn-primary">Yes and continue shopping</button>
+					</a>
+					<a href="{% url 'add_and_redirect' book.book_id %}">
+						<button type="button" class="btn btn-primary">Yes and go to cart</button>
+					</a>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}
 
 
