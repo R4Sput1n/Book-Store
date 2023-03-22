@@ -27,6 +27,15 @@
       "full_name": "Mike Williams"
     }
   },
+    {
+    "model": "store.authors",
+    "pk": 7,
+    "fields": {
+      "full_name": "Brandon Sanderson"
+    }
+  },
+
+
   {
     "model": "store.series",
     "pk": 3,
@@ -63,6 +72,34 @@
       "author": 4
     }
   },
+  {
+    "model": "store.series",
+    "pk": 7,
+    "fields": {
+      "series_name": "Mistborn Era I",
+      "volume_count": 3,
+      "author": 7
+    }
+  },
+  {
+    "model": "store.series",
+    "pk": 8,
+    "fields": {
+      "series_name": "Mistborn Era II",
+      "volume_count": 4,
+      "author": 7
+    }
+  },
+  {
+    "model": "store.series",
+    "pk": 9,
+    "fields": {
+      "series_name": "Stormlight Archive",
+      "volume_count": 4,
+      "author": 7
+    }
+  },
+
   {
     "model": "store.books",
     "pk": 10,
@@ -211,6 +248,171 @@
       "pdf_path": "default.pdf",
       "genre": "Poetry",
       "price": "123.33"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 20,
+    "fields": {
+      "book_title": "The Final Empire",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere est est. Cras commodo ornare vehicula. Fusce congue nec eros nec interdum. Aliquam congue libero orci, quis lacinia metus facilisis quis. Nulla at dui sodales, dapibus turpis vitae, pellentesque est. Curabitur est leo, pulvinar id enim at, tincidunt volutpat metus. Aliquam erat volutpat. Phasellus est est, mattis sed tincidunt et, finibus eget purus. Sed suscipit viverra elit at hendrerit. Vestibulum enim lorem, elementum eu velit nec, faucibus feugiat justo. Donec id lorem efficitur, dignissim neque sed, vestibulum lectus. Nulla iaculis velit eu quam condimentum tincidunt. Nunc ac enim leo. Maecenas at placerat nibh, sit amet faucibus felis. Mauris ac enim est.",
+      "author": 7,
+      "series": 7,
+      "volume_number": 1,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Fantasy",
+      "price": "12.99"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 21,
+    "fields": {
+      "book_title": "The Well of Ascension",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere est est. Cras commodo ornare vehicula. Fusce congue nec eros nec interdum. Aliquam congue libero orci, quis lacinia metus facilisis quis. Nulla at dui sodales, dapibus turpis vitae, pellentesque est. Curabitur est leo, pulvinar id enim at, tincidunt volutpat metus. Aliquam erat volutpat. Phasellus est est, mattis sed tincidunt et, finibus eget purus. Sed suscipit viverra elit at hendrerit. Vestibulum enim lorem, elementum eu velit nec, faucibus feugiat justo. Donec id lorem efficitur, dignissim neque sed, vestibulum lectus. Nulla iaculis velit eu quam condimentum tincidunt. Nunc ac enim leo. Maecenas at placerat nibh, sit amet faucibus felis. Mauris ac enim est.",
+      "author": 7,
+      "series": 7,
+      "volume_number": 2,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Fantasy",
+      "price": "12.99"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 22,
+    "fields": {
+      "book_title": "The Hero of Ages",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere est est. Cras commodo ornare vehicula. Fusce congue nec eros nec interdum. Aliquam congue libero orci, quis lacinia metus facilisis quis. Nulla at dui sodales, dapibus turpis vitae, pellentesque est. Curabitur est leo, pulvinar id enim at, tincidunt volutpat metus. Aliquam erat volutpat. Phasellus est est, mattis sed tincidunt et, finibus eget purus. Sed suscipit viverra elit at hendrerit. Vestibulum enim lorem, elementum eu velit nec, faucibus feugiat justo. Donec id lorem efficitur, dignissim neque sed, vestibulum lectus. Nulla iaculis velit eu quam condimentum tincidunt. Nunc ac enim leo. Maecenas at placerat nibh, sit amet faucibus felis. Mauris ac enim est.",
+      "author": 7,
+      "series": 7,
+      "volume_number": 3,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Fantasy",
+      "price": "12.99"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 23,
+    "fields": {
+      "book_title": "The Alloy of Law",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere est est. Cras commodo ornare vehicula. Fusce congue nec eros nec interdum. Aliquam congue libero orci, quis lacinia metus facilisis quis. Nulla at dui sodales, dapibus turpis vitae, pellentesque est. Curabitur est leo, pulvinar id enim at, tincidunt volutpat metus. Aliquam erat volutpat. Phasellus est est, mattis sed tincidunt et, finibus eget purus. Sed suscipit viverra elit at hendrerit. Vestibulum enim lorem, elementum eu velit nec, faucibus feugiat justo. Donec id lorem efficitur, dignissim neque sed, vestibulum lectus. Nulla iaculis velit eu quam condimentum tincidunt. Nunc ac enim leo. Maecenas at placerat nibh, sit amet faucibus felis. Mauris ac enim est.",
+      "author": 7,
+      "series": 8,
+      "volume_number": 1,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Fantasy",
+      "price": "11.99"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 24,
+    "fields": {
+      "book_title": "Shadows of self",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere est est. Cras commodo ornare vehicula. Fusce congue nec eros nec interdum. Aliquam congue libero orci, quis lacinia metus facilisis quis. Nulla at dui sodales, dapibus turpis vitae, pellentesque est. Curabitur est leo, pulvinar id enim at, tincidunt volutpat metus. Aliquam erat volutpat. Phasellus est est, mattis sed tincidunt et, finibus eget purus. Sed suscipit viverra elit at hendrerit. Vestibulum enim lorem, elementum eu velit nec, faucibus feugiat justo. Donec id lorem efficitur, dignissim neque sed, vestibulum lectus. Nulla iaculis velit eu quam condimentum tincidunt. Nunc ac enim leo. Maecenas at placerat nibh, sit amet faucibus felis. Mauris ac enim est.",
+      "author": 7,
+      "series": 8,
+      "volume_number": 2,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Fantasy",
+      "price": "11.99"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 25,
+    "fields": {
+      "book_title": "The Bands of Mourning",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere est est. Cras commodo ornare vehicula. Fusce congue nec eros nec interdum. Aliquam congue libero orci, quis lacinia metus facilisis quis. Nulla at dui sodales, dapibus turpis vitae, pellentesque est. Curabitur est leo, pulvinar id enim at, tincidunt volutpat metus. Aliquam erat volutpat. Phasellus est est, mattis sed tincidunt et, finibus eget purus. Sed suscipit viverra elit at hendrerit. Vestibulum enim lorem, elementum eu velit nec, faucibus feugiat justo. Donec id lorem efficitur, dignissim neque sed, vestibulum lectus. Nulla iaculis velit eu quam condimentum tincidunt. Nunc ac enim leo. Maecenas at placerat nibh, sit amet faucibus felis. Mauris ac enim est.",
+      "author": 7,
+      "series": 8,
+      "volume_number": 3,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Fantasy",
+      "price": "11.99"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 26,
+    "fields": {
+      "book_title": "The Lost Metal",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere est est. Cras commodo ornare vehicula. Fusce congue nec eros nec interdum. Aliquam congue libero orci, quis lacinia metus facilisis quis. Nulla at dui sodales, dapibus turpis vitae, pellentesque est. Curabitur est leo, pulvinar id enim at, tincidunt volutpat metus. Aliquam erat volutpat. Phasellus est est, mattis sed tincidunt et, finibus eget purus. Sed suscipit viverra elit at hendrerit. Vestibulum enim lorem, elementum eu velit nec, faucibus feugiat justo. Donec id lorem efficitur, dignissim neque sed, vestibulum lectus. Nulla iaculis velit eu quam condimentum tincidunt. Nunc ac enim leo. Maecenas at placerat nibh, sit amet faucibus felis. Mauris ac enim est.",
+      "author": 7,
+      "series": 8,
+      "volume_number": 4,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Fantasy",
+      "price": "11.99"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 27,
+    "fields": {
+      "book_title": "The Way of Kings",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere est est. Cras commodo ornare vehicula. Fusce congue nec eros nec interdum. Aliquam congue libero orci, quis lacinia metus facilisis quis. Nulla at dui sodales, dapibus turpis vitae, pellentesque est. Curabitur est leo, pulvinar id enim at, tincidunt volutpat metus. Aliquam erat volutpat. Phasellus est est, mattis sed tincidunt et, finibus eget purus. Sed suscipit viverra elit at hendrerit. Vestibulum enim lorem, elementum eu velit nec, faucibus feugiat justo. Donec id lorem efficitur, dignissim neque sed, vestibulum lectus. Nulla iaculis velit eu quam condimentum tincidunt. Nunc ac enim leo. Maecenas at placerat nibh, sit amet faucibus felis. Mauris ac enim est.",
+      "author": 7,
+      "series": 9,
+      "volume_number": 1,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Fantasy",
+      "price": "14.99"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 28,
+    "fields": {
+      "book_title": "Words of Radiance",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere est est. Cras commodo ornare vehicula. Fusce congue nec eros nec interdum. Aliquam congue libero orci, quis lacinia metus facilisis quis. Nulla at dui sodales, dapibus turpis vitae, pellentesque est. Curabitur est leo, pulvinar id enim at, tincidunt volutpat metus. Aliquam erat volutpat. Phasellus est est, mattis sed tincidunt et, finibus eget purus. Sed suscipit viverra elit at hendrerit. Vestibulum enim lorem, elementum eu velit nec, faucibus feugiat justo. Donec id lorem efficitur, dignissim neque sed, vestibulum lectus. Nulla iaculis velit eu quam condimentum tincidunt. Nunc ac enim leo. Maecenas at placerat nibh, sit amet faucibus felis. Mauris ac enim est.",
+      "author": 7,
+      "series": 9,
+      "volume_number": 2,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Fantasy",
+      "price": "14.99"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 29,
+    "fields": {
+      "book_title": "Oathbringer",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere est est. Cras commodo ornare vehicula. Fusce congue nec eros nec interdum. Aliquam congue libero orci, quis lacinia metus facilisis quis. Nulla at dui sodales, dapibus turpis vitae, pellentesque est. Curabitur est leo, pulvinar id enim at, tincidunt volutpat metus. Aliquam erat volutpat. Phasellus est est, mattis sed tincidunt et, finibus eget purus. Sed suscipit viverra elit at hendrerit. Vestibulum enim lorem, elementum eu velit nec, faucibus feugiat justo. Donec id lorem efficitur, dignissim neque sed, vestibulum lectus. Nulla iaculis velit eu quam condimentum tincidunt. Nunc ac enim leo. Maecenas at placerat nibh, sit amet faucibus felis. Mauris ac enim est.",
+      "author": 7,
+      "series": 9,
+      "volume_number": 3,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Fantasy",
+      "price": "14.99"
+    }
+  },
+  {
+    "model": "store.books",
+    "pk": 30,
+    "fields": {
+      "book_title": "Rhythm of War",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur posuere est est. Cras commodo ornare vehicula. Fusce congue nec eros nec interdum. Aliquam congue libero orci, quis lacinia metus facilisis quis. Nulla at dui sodales, dapibus turpis vitae, pellentesque est. Curabitur est leo, pulvinar id enim at, tincidunt volutpat metus. Aliquam erat volutpat. Phasellus est est, mattis sed tincidunt et, finibus eget purus. Sed suscipit viverra elit at hendrerit. Vestibulum enim lorem, elementum eu velit nec, faucibus feugiat justo. Donec id lorem efficitur, dignissim neque sed, vestibulum lectus. Nulla iaculis velit eu quam condimentum tincidunt. Nunc ac enim leo. Maecenas at placerat nibh, sit amet faucibus felis. Mauris ac enim est.",
+      "author": 7,
+      "series": 9,
+      "volume_number": 4,
+      "cover": "default.jpg",
+      "pdf_path": "default.pdf",
+      "genre": "Fantasy",
+      "price": "14.99"
     }
   }
 ]
