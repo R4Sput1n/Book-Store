@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .forms import AccountCreationForm
-from accounts.models import OwnedProducts
+from .forms import AccountCreationForm, AddBookForm
+from .models import OwnedProducts, Profile
 from store.models import Books
 from django.contrib.auth.models import User
 
@@ -46,3 +46,24 @@ def profile(request, profile):
 def become_author(request):
     pass
     #some code to send email to admin
+
+
+def add_book(request):
+    profile = Profile.objects.get(user=request.user)
+    book_added = False
+
+    if request.method == 'POST':
+        form = AddBookForm(request.POST)
+        if form.is_valid():
+            book_added = True
+            form.instance.author = profile.author_ref
+            form.save()
+    else:
+        form = AddBookForm()
+
+    context = {
+        'profile': profile,
+        'form': form,
+        'book_added': book_added
+    }
+    return render(request, 'store/accounts/add_book.html', context)

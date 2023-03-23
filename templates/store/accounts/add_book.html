@@ -1,0 +1,14 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+	{% if book_added %}
+		<h1>Book added to the store</h1>
+		<p>"{{ profile.author_ref }}"</p>
+	{% else %}
+		<form method="post">
+			{{ form.as_div }}
+			{% csrf_token %}
+			<input type="submit" value="Add Book">
+		</form>
+	{% endif %}
+{% endblock %}

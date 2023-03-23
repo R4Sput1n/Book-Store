@@ -22,6 +22,12 @@
 		{% for book in books_by %}
 			<div>{{ book }}</div>
 		{% endfor %}
+		<div>
+			<h2>Add another book?</h2>
+			<a href="{% url 'add_book' %}">
+				Add new book here!
+			</a>
+		</div>
 
 	{% endif %}
 	<h2>Bought books</h2>
