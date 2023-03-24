@@ -53,13 +53,13 @@ def add_book(request):
     book_added = False
 
     if request.method == 'POST':
-        form = AddBookForm(request.POST)
+        form = AddBookForm(profile, request.POST)
         if form.is_valid():
             book_added = True
             form.instance.author = profile.author_ref
             form.save()
     else:
-        form = AddBookForm()
+        form = AddBookForm(profile)
 
     context = {
         'profile': profile,

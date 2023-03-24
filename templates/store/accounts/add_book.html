@@ -1,14 +1,24 @@
 {% extends 'store/base.html' %}
+{% load crispy_forms_filters %}
 
 {% block content %}
-	{% if book_added %}
-		<h1>Book added to the store</h1>
-		<p>"{{ profile.author_ref }}"</p>
-	{% else %}
-		<form method="post">
-			{{ form.as_div }}
-			{% csrf_token %}
-			<input type="submit" value="Add Book">
-		</form>
-	{% endif %}
+	<div class="content-section">
+		{% if book_added %}
+			<h1>Book added to the store</h1>
+			<p>"{{ profile.author_ref }}"</p>
+
+		{% else %}
+			<form method="post">
+				<div class="col">
+					<fieldset class="form-group">
+						<legend class="border-bottom mb-4">Add Book</legend>
+						{{ form|crispy }}
+					</fieldset>
+					{% csrf_token %}
+					<input type="submit" value="Add Book">
+				</div>
+			</form>
+		{% endif %}
+	</div>
+
 {% endblock %}

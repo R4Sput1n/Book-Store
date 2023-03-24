@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.forms import ModelForm
 from store.models import Books
-from store.models import Authors
+from store.models import Series
 
 
 class AccountCreationForm(UserCreationForm):
@@ -23,3 +23,6 @@ class AddBookForm(ModelForm):
             'pdf_path': 'Upload PDF',
         }
 
+    def __init__(self, profile, *args, **kwargs):
+        super(AddBookForm, self).__init__(*args, **kwargs)
+        self.fields['series'].queryset = Series.objects.filter(author=profile.author_ref)
