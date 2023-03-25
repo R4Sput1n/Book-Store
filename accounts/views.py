@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from .forms import AccountCreationForm, AddBookForm
+from .forms import AccountCreationForm, AddBookForm, EditBookForm
 from .models import OwnedProducts, Profile
 from store.models import Books
 from django.contrib.auth.models import User
@@ -67,3 +67,25 @@ def add_book(request):
         'book_added': book_added
     }
     return render(request, 'store/accounts/add_book.html', context)
+
+
+def edit_book(request, book):
+    profile = Profile.objects.get(user=request.user)
+    book_edited = False
+    book_instance = Books.objects.get(book_id=book)
+
+    if request.method == 'POST':
+        form = EditBookForm(profile, request.POST, instance=book_instance)
+        if form.is_valid():
+            book_edited = True
+            form.instance.author = profile.author_ref
+            form.save()
+    else:
+        form = EditBookForm(profile, instance=book_instance)
+
+    context = {
+        'profile': profile,
+        'form': form,
+        'book_edited': book_edited
+    }
+    return render(request, 'store/accounts/edit_book.html', context)

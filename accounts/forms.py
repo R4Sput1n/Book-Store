@@ -26,3 +26,17 @@ class AddBookForm(ModelForm):
     def __init__(self, profile, *args, **kwargs):
         super(AddBookForm, self).__init__(*args, **kwargs)
         self.fields['series'].queryset = Series.objects.filter(author=profile.author_ref)
+
+
+class EditBookForm(ModelForm):
+    class Meta:
+        model = Books
+        fields = '__all__'
+        exclude = ['author']
+        labels = {
+            'pdf_path': 'Upload PDF',
+        }
+
+    def __init__(self, profile, *args, **kwargs):
+        super(EditBookForm, self).__init__(*args, **kwargs)
+        self.fields['series'].queryset = Series.objects.filter(author=profile.author_ref)

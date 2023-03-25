@@ -1,0 +1,24 @@
+{% extends 'store/base.html' %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+	<div class="content-section">
+		{% if book_edited %}
+			<h1>Book edited successfully</h1>
+			<p>"{{ profile.author_ref }}"</p>
+
+		{% else %}
+			<form method="post">
+				<div class="col">
+					<fieldset class="form-group">
+						<legend class="border-bottom mb-4">Edit Book</legend>
+						{{ form|crispy }}
+					</fieldset>
+					{% csrf_token %}
+					<input type="submit" value="Edit Book">
+				</div>
+			</form>
+		{% endif %}
+	</div>
+
+{% endblock %}
