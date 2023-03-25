@@ -53,7 +53,7 @@ def add_book(request):
     book_added = False
 
     if request.method == 'POST':
-        form = AddBookForm(profile, request.POST)
+        form = AddBookForm(profile, request.POST, request.FILES)
         if form.is_valid():
             book_added = True
             form.instance.author = profile.author_ref
@@ -75,7 +75,7 @@ def edit_book(request, book):
     book_instance = Books.objects.get(book_id=book)
 
     if request.method == 'POST':
-        form = EditBookForm(profile, request.POST, instance=book_instance)
+        form = EditBookForm(profile, request.POST, request.FILES, instance=book_instance)
         if form.is_valid():
             book_edited = True
             form.instance.author = profile.author_ref
